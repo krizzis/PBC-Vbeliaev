@@ -4,6 +4,7 @@
 
 **1. Vagrant file:**
 Deploy VM with Vagrant, configure IP address and name  
+[File](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day%201/Vagrantfile)
 
 
 **2. Fibonacci sequence:**
