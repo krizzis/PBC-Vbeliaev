@@ -28,3 +28,5 @@ You can run the script [Numbers_pairs.py](https://github.com/krizzis/PBC-Vbeliae
 
 E.g. `Numbers_pairs.py 1 5 8 9 10 -74 5 6 4 4` will print (\[1, 9],\[5, 5], \[6,4])  
 while `Numbers_pairs.py 1 5 8 9 10 -74 5 6 4 4 --all` will print (\[1, 9],\[5, 5], \[6,4], \[6,4])
+
+* **-h:** Print help
