@@ -2,12 +2,12 @@
 
 ## [Day 1](https://github.com/krizzis/PBC-Vbeliaev/tree/master/Day%201) ## 
 
-**1. Vagrant file:**
+### **1. Vagrant file:** ###
 Deploy VM with Vagrant, configure IP address and name  
 [File](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day%201/Vagrantfile)
 
 
-**2. Fibonacci sequence:**
+### **2. Fibonacci sequence:** ###
 *Function which prints desired count of fibonacci numbers.*  
 You can run the script [Fibonacci.py](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day%201/Fibonacci.py) with the following parameters:  
 
@@ -18,7 +18,7 @@ E.g. `Fibonacci.py 15` will print 15 first members of Fibonacci sequence
 * **-h:** Print help
 
 
-**3. Numbers pairs:**
+### **3. Numbers pairs:** ###
 *Function which prints pairs of numbers which sum is specified for a given collection of numbers*
 You can run the script [Numbers_pairs.py](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day%201/Numbers_pairs.py) with the following parameters:
 
