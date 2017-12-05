@@ -3,4 +3,4 @@
 ### Change log ###
 
 #### Vagrant file ####
-- Add java installation script to VM setup
+- Add java and pip installation script to VM setup
