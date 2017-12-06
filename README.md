@@ -1,8 +1,21 @@
 # PBC-Vbeliaev #
 
+# Table of Contents
+1. [Example](#example)
+2. [Example2](#example2)
+3. [Third Example](#third-example)
+
+## Example
+## Example2
+## Third Example
+
+Table of context:  
+[Vagrant file](#vagrant-file)
+
 ## [Day 1](https://github.com/krizzis/PBC-Vbeliaev/tree/master/Day1) ## 
 
 ### **1. Vagrant file:** ###
+
 Deploy VM with Vagrant, configure IP address and name  
 [File](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day1/Vagrantfile)
 
@@ -30,3 +43,11 @@ E.g. `Numbers_pairs.py 1 5 8 9 10 -74 5 6 4 4` will print (\[1, 9],\[5, 5], \[6,
 while `Numbers_pairs.py 1 5 8 9 10 -74 5 6 4 4 --all` will print (\[1, 9],\[5, 5], \[6,4], \[6,4])
 
 * **-h:** Print help
+
+## [Day 2](https://github.com/krizzis/PBC-Vbeliaev/tree/master/Day2) ## 
+
+### **1. Prepare virtual environment:** ###
+
+### **2. Simple unit tests:** ###
+
+### **3. Install Java on VM:** ###
