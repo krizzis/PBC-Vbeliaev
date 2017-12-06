@@ -1,5 +1,5 @@
 import pytest
-from Day3.my_app.Fibonacci import fib
+from my_app.Fibonacci import fib
 
 
 def test_smoke():
