@@ -3,15 +3,15 @@
 Project for Python Boot Camp (SoftServe, Dec 2017)
 
 ## Table of contents ##
-* ### **Day 1:**  ###
+* **[Day 1](#day-1)**
   * [Vagrant file](#1-vagrant-file)
   * [Fibonacci sequence](#2-fibonacci-sequence)
   * [Numbers pairs](#3-numbers-pairs)
-* ### **Day 2:** ###
+* **[Day 2](#day-2)**
   * [Prepare virtual environment](#1-prepare-virtual-environment)
   * [Simple unit tests](#2-simple-unit-tests)
   * [Install Java on VM](#3-install-java-on-vm)
-* ### **Day 3:** ###
+* **[Day 3](#day-3)**
   * [Structurize project](#1-structurize-project)
   * [Use parametrize](#2-use-parametrize)
   * [Configure markers](#3-configure-markers)
