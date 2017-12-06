@@ -12,10 +12,15 @@ Project for Python Boot Camp (SoftServe, Dec 2017)
   * [Simple unit tests](simple-unit-tests)
   * [Install Java on VM](install-java-on-vm)
 * ### **Day 3:** ###
+  * [Structurize project](#structurize-project)
+  * [Use parametrize](#use-parametrize)
+  * [Configure markers](#configure-markers)
+  * [Use CLI config for your tow programs](#use-cli-config-for-you-tow-programs)
+   
 
 ## [Day 1](https://github.com/krizzis/PBC-Vbeliaev/tree/master/Day1) ##
   
-### **Vagrant file** ###
+### **1. Vagrant file** ###
 
 *Deploy VM with Vagrant, configure IP address and name*
 
@@ -40,7 +45,7 @@ Finally you can connect to your VM with ssh: `ssh vagrant@192.168.33.10` (login/
 [File](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day1/Vagrantfile)
 
 
-### **Fibonacci sequence** ###
+### **2. Fibonacci sequence** ###
 *Function which prints desired count of fibonacci numbers.*  
 You can run the script [Fibonacci.py](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day1/Fibonacci.py) with the following parameters:  
 
@@ -51,7 +56,7 @@ E.g. `Fibonacci.py 15` will print 15 first members of Fibonacci sequence
 * **-h:** Print help
 
 
-### **Numbers pairs** ###
+### **3. Numbers pairs** ###
 *Function which prints pairs of numbers which sum is specified for a given collection of numbers*
 You can run the script [Numbers_pairs.py](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day1/Numbers_pairs.py) with the following parameters:
 
@@ -101,6 +106,14 @@ SHELL
 
 Run VM and check Java has been installed `java -version`  
 
-DAY 3
+## DAY 3 ##
 
-#
+### **1. Structurize project** ###
+
+### **2. Use parametrize** ###
+
+### **3. Configure markers** ###
+
+### **4. Use CLI config for your tow programs** ###
+
+
