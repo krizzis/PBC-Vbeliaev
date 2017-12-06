@@ -1,5 +1,7 @@
 # PBC-Vbeliaev #  
 
+Project for Python Boot Camp (SoftServe, Dec 2017)
+
 ## Table of contents ##
 * ### **Day 1:**  ###
   * [Vagrant file](#vagrant-file)
