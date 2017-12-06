@@ -1,14 +1,11 @@
 import argparse
-import sys
+from Decorators import func_args
 
 
+@func_args
 def fib(n):
-    try:
-        if n <= 0:
-            raise ValueError
-    except ValueError:
-        print "Number must be a positive"
-        sys.exit()
+    if n <= 0:
+        raise ValueError("Number must be a positive")
 
     a1, a2 = 0, 1
     res = []
@@ -19,6 +16,7 @@ def fib(n):
         res.append(s)
 
     return res
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Print given number of members of Fibonacci sequence")

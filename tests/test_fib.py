@@ -20,12 +20,17 @@ def test_positive(test_input, expected):
     assert fib(test_input) == expected
 
 
-@pytest.mark.parametrize("test_input,expected", [
-    (0,  SystemExit),
-    (-3, SystemExit),
-    (1.0, TypeError),
-    ((1, 1), TypeError),
+@pytest.mark.parametrize("test_input,expected,message", [
+    (0,  ValueError, "Number must be a positive"),
+    (-3, ValueError, "Number must be a positive"),
+    (1.0, TypeError, ".*"),
+    ((1, 1), TypeError, ".*"),
 ])
-def test_neg_str(test_input, expected):
-    with pytest.raises(expected):
+def test_neg_str(test_input, expected, message):
+    with pytest.raises(expected, match=message):
         fib(test_input)
+
+
+@pytest.mark.skip
+def test_some_todo_test():
+    pass

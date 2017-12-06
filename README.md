@@ -3,23 +3,25 @@
 Project for Python Boot Camp (SoftServe, Dec 2017)
 
 ## Table of contents ##
-* ### **Day 1:**  ###
+* **[Day 1](#day-1)**
   * [Vagrant file](#1-vagrant-file)
   * [Fibonacci sequence](#2-fibonacci-sequence)
   * [Numbers pairs](#3-numbers-pairs)
-* ### **Day 2:** ###
+* **[Day 2](#day-2)**
   * [Prepare virtual environment](#1-prepare-virtual-environment)
   * [Simple unit tests](#2-simple-unit-tests)
   * [Install Java on VM](#3-install-java-on-vm)
-* ### **Day 3:** ###
-  * [Structurize project](#1-structurize-project)
+* **[Day 3](#day-3)**
+  * [Structuring project](#1-structuring-project)
   * [Use parametrize](#2-use-parametrize)
   * [Configure markers](#3-configure-markers)
   * [Use CLI config for your tow programs](#4-use-cli-config-for-you-tow-programs)
+  * [Decorator](#5-decorator)
+* **[Day 4](#day-4)**
    
 
-## [Day 1](https://github.com/krizzis/PBC-Vbeliaev/tree/master/Day1) ##
-  
+## DAY 1 ##
+
 ### **1. Vagrant file** ###
 
 *Deploy VM with Vagrant, configure IP address and name*
@@ -69,7 +71,7 @@ while `Numbers_pairs.py 1 5 8 9 10 -74 5 6 4 4 --all` will print (\[1, 9],\[5, 5
 
 * **-h:** Print help
 
-## [Day 2](https://github.com/krizzis/PBC-Vbeliaev/tree/master/Day2) ## 
+## DAY 2 ##
 
 ### **1. Prepare virtual environment** ###
 *Prepare the virtual environment for your project.*
@@ -108,12 +110,52 @@ Run VM and check Java has been installed `java -version`
 
 ## DAY 3 ##
 
-### **1. Structurize project** ###
+### **1. Structuring project** ###
+
+Current project's structure rebuild into:
+```
+├── README.md               <- This file. Contains all information need to know to work with this code
+├── my_app                  <- Main package for code
+├── requirements.txt        <- Contains all required dependencies
+└── tests                   <- Main package for unit tests
+```
 
 ### **2. Use parametrize** ###
+Both `test_fib.py` and `test_pairs.py` have been refactored. Similar tests have been replaced with parametrized tests.
+E.g.:
+
+```
+@pytest.mark.parametrize("test_input,expected", [
+    (1, [0]),
+    (2, [0, 1]),
+    (3, [0, 1, 1]),
+    (7, [0, 1, 1, 2, 3, 5, 8]),
+])
+def test_positive(test_input, expected):
+    assert fib(test_input) == expected
+```
 
 ### **3. Configure markers** ###
 
+One dummy test has been added to `test_fib.py` to demonstrate `skip` markers:
+
+```
+@pytest.mark.skip
+def test_some_todo_test():
+    pass
+
+```
+
 ### **4. Use CLI config for your tow programs** ###
+
+CLI config have been added on Day 1: [Fibonacci](#2-fibonacci-sequence) and [Numbers pairs](#3-numbers-pairs)
+
+### **5. Decorator ** ###
+Module `Decorator` have been added. Contains decorator to print function name and arguments each run. Example of output:
+`pairs([1, 9, 1], all_pairs=True)`
+
+## DAY 4 ##
+
+Todo
 
 
