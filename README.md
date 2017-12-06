@@ -150,7 +150,7 @@ def test_some_todo_test():
 
 CLI config have been added on Day 1: [Fibonacci](#2-fibonacci-sequence) and [Numbers pairs](#3-numbers-pairs)
 
-### **5. Decorator ** ###
+### **5. Decorator** ###
 Module `Decorator` have been added. Contains decorator to print function name and arguments each run. Example of output:
 `pairs([1, 9, 1], all_pairs=True)`
 
