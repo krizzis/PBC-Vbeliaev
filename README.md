@@ -1,20 +1,11 @@
 # PBC-Vbeliaev #
 
 # Table of Contents
-1. [Example](#example)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
-
-## Example
-## Example2
-## Third Example
-
-Table of context:  
 [Vagrant file](#vagrant-file)
 
 ## [Day 1](https://github.com/krizzis/PBC-Vbeliaev/tree/master/Day1) ## 
 
-### **1. Vagrant file:** ###
+### **Vagrant file** ###
 
 Deploy VM with Vagrant, configure IP address and name  
 [File](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day1/Vagrantfile)
