@@ -4,18 +4,18 @@ Project for Python Boot Camp (SoftServe, Dec 2017)
 
 ## Table of contents ##
 * ### **Day 1:**  ###
-  * [Vagrant file](#vagrant-file)
-  * [Fibonacci sequence](#fibonacci-sequence)
-  * [Numbers pairs](#numbers-pairs)
+  * [Vagrant file](#1-vagrant-file)
+  * [Fibonacci sequence](#2-fibonacci-sequence)
+  * [Numbers pairs](#3-numbers-pairs)
 * ### **Day 2:** ###
-  * [Prepare virtual environment](#prepare-virtual-environment)
-  * [Simple unit tests](simple-unit-tests)
-  * [Install Java on VM](install-java-on-vm)
+  * [Prepare virtual environment](#1-prepare-virtual-environment)
+  * [Simple unit tests](#2-simple-unit-tests)
+  * [Install Java on VM](#3-install-java-on-vm)
 * ### **Day 3:** ###
-  * [Structurize project](#structurize-project)
-  * [Use parametrize](#use-parametrize)
-  * [Configure markers](#configure-markers)
-  * [Use CLI config for your tow programs](#use-cli-config-for-you-tow-programs)
+  * [Structurize project](#1-structurize-project)
+  * [Use parametrize](#2-use-parametrize)
+  * [Configure markers](#3-configure-markers)
+  * [Use CLI config for your tow programs](#4-use-cli-config-for-you-tow-programs)
    
 
 ## [Day 1](https://github.com/krizzis/PBC-Vbeliaev/tree/master/Day1) ##
