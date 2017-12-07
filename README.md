@@ -148,7 +148,8 @@ def test_some_todo_test():
 
 ### **4. Use CLI config for your tow programs** ###
 
-CLI config have been added on Day 1: [Fibonacci](#2-fibonacci-sequence) and [Numbers pairs](#3-numbers-pairs)
+Module `app.py` has been added to the root. You can run module from console to call either `Fibonacci.py` or `Numbers_pairs.py` using their arguments.
+You can find more detail in section Day 1:  [Fibonacci](#2-fibonacci-sequence) and [Numbers pairs](#3-numbers-pairs)
 
 ### **5. Decorator** ###
 Module `Decorator` have been added. Contains decorator to print function name and arguments each run. Example of output:
