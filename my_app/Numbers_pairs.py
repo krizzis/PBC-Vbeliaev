@@ -1,5 +1,5 @@
 import argparse
-from Decorators import func_args
+from my_app.Decorators import func_args
 
 
 @func_args
@@ -11,7 +11,10 @@ def pairs(n, s=10, all_pairs=False):
 
     for i in n:
         if type(i) not in (int, float, long):
-            raise TypeError("Only list of digits accepted")
+            if type(i) == str:
+                    i = int(i)
+                    break
+            # raise TypeError("Only list of digits accepted")
 
     if length <= 1:
         raise ValueError("At least 2 numbers required")

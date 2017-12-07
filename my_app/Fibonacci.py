@@ -1,5 +1,5 @@
 import argparse
-from Decorators import func_args
+from my_app.Decorators import func_args
 
 
 @func_args
