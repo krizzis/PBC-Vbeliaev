@@ -44,12 +44,12 @@ Then run `vagrant up`
 Finally you can connect to your VM with ssh: `ssh vagrant@192.168.33.10` (login/pass is 'vagant')
 
 
-[File](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day1/Vagrantfile)
+[File](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Vagrantfile)
 
 
 ### **2. Fibonacci sequence** ###
 *Function which prints desired count of fibonacci numbers.*  
-You can run the script [Fibonacci.py](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day1/Fibonacci.py) with the following parameters:  
+You can run the script `Fibonacci.py`  
 
 * **number (int):** (Mandatory) Number The required number of sequence members.  
 E.g. `Fibonacci.py 15` will print 15 first members of Fibonacci sequence
@@ -60,7 +60,7 @@ E.g. `Fibonacci.py 15` will print 15 first members of Fibonacci sequence
 
 ### **3. Numbers pairs** ###
 *Function which prints pairs of numbers which sum is specified for a given collection of numbers*
-You can run the script [Numbers_pairs.py](https://github.com/krizzis/PBC-Vbeliaev/blob/master/Day1/Numbers_pairs.py) with the following parameters:
+You can run the script `Numbers_pairs.py`
 
 * **-n (--numbers):** (Mandatory) List of numbers to check.  
 * **-s (--summ):** (Optional) Sum of pairs to check. Default value = 10
@@ -150,6 +150,11 @@ def test_some_todo_test():
 
 Module `app.py` has been added to the root. You can run module from console to call either `Fibonacci.py` or `Numbers_pairs.py` using their arguments.
 You can find more detail in section Day 1:  [Fibonacci](#2-fibonacci-sequence) and [Numbers pairs](#3-numbers-pairs)
+
+Also Module `app2.py` has been added for `docopt` version of implementation.
+
+`Docopt` is a command-line interface description language. For more details about library you can find on its website: [docopt.org](http://docopt.org/) or
+check project's git: [Docopt](https://github.com/docopt/docopt)
 
 ### **5. Decorator** ###
 Module `Decorator` have been added. Contains decorator to print function name and arguments each run. Example of output:
