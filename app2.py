@@ -1,6 +1,6 @@
 """Usage:
     app2.py fib <n>
-    app2.py pairs [all][<ns>...][--sum=<n>]
+    app2.py pairs <ns>...
 
 Commands:
     fib         Print given number of members of Fibonacci sequence
@@ -12,13 +12,11 @@ Arguments:
 
 Options:
   -h --help     Show this screen.
-  all           Flag to find all possible pairs. Only unique pairs without it
-  --sum=<n>     Sum of pairs to check. [default: 10].
 """
 
 from docopt import docopt
-from my_app.Fibonacci import fib
-from my_app.Numbers_pairs import pairs
+from my_app.fibonacci import fib
+from my_app.numbers_pairs import pairs
 
 
 if __name__ == '__main__':
@@ -27,4 +25,4 @@ if __name__ == '__main__':
     if args['fib']:
         print fib(int(args["<n>"]))
     elif args['pairs']:
-        print pairs(list(map(int, args.get('<n>'))), int(args["--sum"]), args["all"])
+        print pairs(*list(map(int, args["<ns>"])))

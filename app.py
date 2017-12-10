@@ -14,19 +14,15 @@ if __name__ == '__main__':
     parser_fib.set_defaults(which='fib')
 
     parser_pairs = subparsers.add_parser('pairs', help='Return pairs with specified sum.')
-    parser_pairs.add_argument('-n', '--numbers', nargs="+", type=int, help='List of numbers to check.')
-    parser_pairs.add_argument('-s', '--sum', type=int, default=10,
-                              help='Optional. Sum of pairs to check. 10 by default')
-    parser_pairs.add_argument('-a', '--all', action='store_true',
-                              help='Flag to find all possible pairs. Only unique pairs by default')
     parser_pairs.set_defaults(which='pairs')
+    parser_pairs.add_argument('-n', '--numbers', nargs="+", type=int, help='List of numbers to check.')
 
     args = parser.parse_args()
 
     if args.which == 'fib':
         fib(args.number)
     elif args.which == 'pairs':
-        pairs(args.numbers, args.sum, args.all)
+        pairs(*args.numbers)
 
 
 
