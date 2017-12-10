@@ -1,4 +1,4 @@
-from my_app.Decorators import func_args
+from my_app.decorators import func_args
 
 
 @func_args

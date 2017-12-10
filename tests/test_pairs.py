@@ -1,5 +1,5 @@
 import pytest
-from my_app.Numbers_pairs import pairs
+from my_app.numbers_pairs import pairs
 
 
 def test_smoke():
