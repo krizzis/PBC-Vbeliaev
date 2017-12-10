@@ -18,6 +18,8 @@ Project for Python Boot Camp (SoftServe, Dec 2017)
   * [Use CLI config for your tow programs](#4-use-cli-config-for-you-tow-programs)
   * [Decorator](#5-decorator)
 * **[Day 4](#day-4)**
+  * [Fix issues](#fix-issues)
+* **[Day 5](#day-5)**
    
 
 ## DAY 1 ##
@@ -162,6 +164,16 @@ Module `Decorator` have been added. Contains decorator to print function name an
 
 ## DAY 4 ##
 
-Todo
+### **Fix issues:** ###
+  
+```
+- All modules have been renamed to be satisfy to naming conversion
+- Mark parametrizing  have been added to all tests
+- number_pairs.py have been updated to needed signature. Related test have been updated also
+```
+
+## DAY 5 ##
+
+TODO
 
 
