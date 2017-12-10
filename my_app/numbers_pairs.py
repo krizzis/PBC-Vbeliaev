@@ -1,14 +1,14 @@
-from my_app.decorators import func_args
+# from my_app.decorators import func_args
 
 
-@func_args
-def pairs(n, s=10, all_pairs=False):
-    try:
-        length = len(n)
-    except TypeError:
-        raise TypeError("Only list of digits accepted")
+# @func_args
+def pairs(*args):
 
-    for i in n:
+    s = 10
+
+    length = len(args)
+
+    for i in args:
         if type(i) not in (int, float, long):
             raise TypeError("Only list of digits accepted")
 
@@ -19,8 +19,8 @@ def pairs(n, s=10, all_pairs=False):
 
     for i in range(0, length - 1):
         for j in range(i + 1, length):
-            if n[i] + n[j] == s:
-                if not all_pairs and ((n[i], n[j]) in result or (n[j], n[i]) in result):
+            if args[i] + args[j] == s:
+                if (args[i], args[j]) in result or (args[j], args[i]) in result:
                     break
-                result.append((n[i], n[j]))
+                result.append((args[i], args[j]))
     return result
