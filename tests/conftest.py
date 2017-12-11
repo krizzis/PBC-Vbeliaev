@@ -18,7 +18,7 @@ def selenium_grid_start():
     stdin, stdout, stderr = client.exec_command('find -name {}'.format(selenium))
     filein = stdout.readlines()
 
-    if filein:
+    if not filein:
         client.exec_command('wget -O {} https://goo.gl/SVuU9X'.format(selenium))
         time.sleep(3)
     client.exec_command('java -jar {} -role hub >> log.txt 2>&1 &'.format(selenium))
