@@ -4,7 +4,8 @@ from my_app.numbers_pairs import pairs
 
 @pytest.mark.smoke
 @pytest.mark.positive
-def test_smoke():
+def test_smoke(selenium_grid_start):
+    assert len(selenium_grid_start) == 2
     assert pairs(1, 9)
 
 
@@ -33,7 +34,6 @@ def test_results_uniqueness_2():
     assert pairs(5, 5, 5, 5).count((5, 5)) == 1
 
 
-@pytest.mark.debug
 @pytest.mark.negative
 @pytest.mark.parametrize("test_input,expected,exp_message", [
     (1, ValueError, "At least 2 numbers required"),

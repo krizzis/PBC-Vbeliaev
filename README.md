@@ -20,6 +20,7 @@ Project for Python Boot Camp (SoftServe, Dec 2017)
 * **[Day 4](#day-4)**
   * [Fix issues](#fix-issues)
 * **[Day 5](#day-5)**
+  * [Automate Selenium Grid installation](#1-automate-selenium-grid-installation)
    
 
 ## DAY 1 ##
@@ -174,6 +175,17 @@ Module `Decorator` have been added. Contains decorator to print function name an
 
 ## DAY 5 ##
 
-TODO
+### **1. Automate Selenium Grid installation** ###
 
+Library `paramiko` has been added to the project:
 
+```
+Paramiko is a Python (2.7, 3.4+) implementation of the SSHv2 protocol [1], providing both client and server functionality.
+While it leverages a Python C extension for low level cryptography (Cryptography), Paramiko itself is a pure Python interface around SSH networking concepts.
+```
+[Paramiko web-site](http://www.paramiko.org/) [Paramiko git](https://github.com/paramiko/paramiko/)
+
+### **2. Use pytest fixtures** ###
+
+Module `conftest.py` contains now fixture to set-up Selenium grid on the virtual machine before tests.
+It also kills all the Selenium processes after all tests execution

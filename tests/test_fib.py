@@ -4,7 +4,8 @@ from my_app.fibonacci import fib
 
 @pytest.mark.smoke
 @pytest.mark.positive
-def test_smoke():
+def test_smoke(selenium_grid_start):
+    assert len(selenium_grid_start) == 2
     assert fib(1)
 
 
@@ -14,6 +15,7 @@ def test_type():
     assert type(fib(1)) == list
 
 
+@pytest.mark.debug
 @pytest.mark.positive
 @pytest.mark.parametrize("test_input,expected", [
     (1, [0]),
