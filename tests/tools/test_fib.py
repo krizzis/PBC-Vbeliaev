@@ -1,11 +1,10 @@
 import pytest
-from my_app.fibonacci import fib
+from pbc.tools.fibonacci import fib
 
 
 @pytest.mark.smoke
 @pytest.mark.positive
-def test_smoke(selenium_grid_start):
-    assert len(selenium_grid_start) == 2
+def test_smoke():
     assert fib(1)
 
 

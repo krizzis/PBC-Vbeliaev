@@ -1,11 +1,10 @@
 import pytest
-from my_app.numbers_pairs import pairs
+from pbc.tools.numbers_pairs import pairs
 
 
 @pytest.mark.smoke
 @pytest.mark.positive
-def test_smoke(selenium_grid_start):
-    assert len(selenium_grid_start) == 2
+def test_smoke():
     assert pairs(1, 9)
 
 

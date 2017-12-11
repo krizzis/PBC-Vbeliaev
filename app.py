@@ -1,6 +1,6 @@
 import argparse
-from my_app.fibonacci import fib
-from my_app.numbers_pairs import pairs
+from pbc.tools.fibonacci import fib
+from pbc.tools.numbers_pairs import pairs
 
 
 if __name__ == '__main__':

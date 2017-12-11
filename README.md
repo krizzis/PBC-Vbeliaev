@@ -21,6 +21,8 @@ Project for Python Boot Camp (SoftServe, Dec 2017)
   * [Fix issues](#fix-issues)
 * **[Day 5](#day-5)**
   * [Automate Selenium Grid installation](#1-automate-selenium-grid-installation)
+* **[Day 6](#day-6)**
+  * [Update project structure](#1-update-project-structure)
    
 
 ## DAY 1 ##
@@ -189,3 +191,18 @@ While it leverages a Python C extension for low level cryptography (Cryptography
 
 Module `conftest.py` contains now fixture to set-up Selenium grid on the virtual machine before tests.
 It also kills all the Selenium processes after all tests execution
+
+## DAY 6 ##
+
+### **1. Update project structure** ###
+
+Structure of project have been updated to match example and following requirements:
+
+* a name of your main package is pbc
+* a name of package with unit tests is tests
+
+Currently structure of the project is:
+
+```
+
+```
