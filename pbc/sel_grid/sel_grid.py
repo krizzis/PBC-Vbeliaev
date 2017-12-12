@@ -44,6 +44,8 @@ class Grid(BaseGrid):
         if self._client.execute('find -name {}'.format(GRID_JAR)):
             print 'File has been downloaded already'
             return True
+        else:
+            return False
 
 
 class StartGrid(BaseGrid):
