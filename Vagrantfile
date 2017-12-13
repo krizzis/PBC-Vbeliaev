@@ -76,6 +76,10 @@ Vagrant.configure("2") do |config|
      apt-get -y -q install oracle-java8-installer
      update-java-alternatives -s java-8-oracle
 	 
-	 apt-get -y install python-pip
+	 add-apt-repository ppa:mozillateam/firefox-next
+     apt-get -y install firefox
+     wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz
+     tar -xvzf geckodriver*
+     mv geckodriver /usr/local/sbin
 	SHELL
 end

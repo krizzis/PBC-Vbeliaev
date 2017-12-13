@@ -1,5 +1,5 @@
-paramiko
-docopt
+selenium==3.8.0
+paramiko==2.4.0
 attrs==17.3.0
 colorama==0.3.9
 pluggy==0.6.0

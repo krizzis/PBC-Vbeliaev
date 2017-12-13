@@ -1,6 +1,7 @@
 # PBC-Vbeliaev #  
 
 Project for Python Boot Camp (SoftServe, Dec 2017)
+Author: Beliaev Viacheslav
 
 ## Table of contents ##
 * **[Day 1](#day-1)**
@@ -23,7 +24,12 @@ Project for Python Boot Camp (SoftServe, Dec 2017)
   * [Automate Selenium Grid installation](#1-automate-selenium-grid-installation)
 * **[Day 6](#day-6)**
   * [Update project structure](#1-update-project-structure)
-   
+  * [Update vagrant](#2-update-vagrant)
+  * [Create tests](#3-create-tests)
+* **[Day 7](#day-7)**
+  * [Install firefox and geckodriver on VM](#1-install-firefox-and-geckodriver-on-vm)
+  * [Update Selenium grid run](#2-update-selenium-grid-run)
+  * [Test a grid config](#3-test-a-grid-config)
 
 ## DAY 1 ##
 
@@ -204,5 +210,82 @@ Structure of project have been updated to match example and following requiremen
 Currently structure of the project is:
 
 ```
+D:.
+│   .gitignore
+│   app.py
+│   README.md
+│   requirements.txt
+│   Vagrantfile
+│
+├───pbc
+│   │   func_decorators.py
+│   │   __init__.py
+│   │
+│   ├───sel_grid
+│   │       conftest.py
+│   │       connections.py
+│   │       sel_grid.py
+│   │       test_sel_grid.py
+│   │       __init__.py
+│   │
+│   └───tools
+│           fibonacci.py
+│           numbers_pairs.py
+│           __init__.py
+│
+└───tests
+    │   __init__.py
+    │
+    └───tools
+            test_fib.py
+            test_pairs.py
+            __init__.py
+```
+
+### **2. Update vagrant** ###
+
+Vagrant file have been updated with:
+`config.vm.define "github krizzis"`
+
+### **3. Create tests** ###
+
+New modules in project:
+
+ * `conftest.py` contains fixture `ssh_client` for creating ssh connection with VM and destroying it after the tests
+ * `connections.py` contains implementation of Ssh client using paramiko
+ * `sel_grid.py` contains classes related to creating and configuring of the Selenium Grid
+ * `test_sel_grid.py` contains tests on creating and configuring Selenium Grid functionality.
+
+## DAY 7 ##
+
+### **1. Install firefox and geckodriver on VM** ###
+
+Following script has been added to Vagrant file:
 
 ```
+add-apt-repository ppa:mozillateam/firefox-next
+apt-get -y install firefox
+wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz
+tar -xvzf geckodriver*
+mv geckodriver /usr/local/sbin
+```
+
+### **2. Update Selenium grid run** ###
+
+Command to download Selenium Grid node configuration file has been added:
+
+```
+wget -O sg-node.json https://gist.github.com/extsoft/aed4cb6e0b1ae3cd1d38cafffdd79310/raw/
+```
+
+Also appropriate changes have been made to use this file during starting a node:
+
+```
+java -jar selenium-server-standalone-3.8.0.jar -role node  -nodeConfig sg-node.json >> log.txt 2>&1 &
+```
+
+Method `is_downloaded` from `Grid` have been updated. `target_file` has been added as parameter. Now method can check different files by filename
+
+Class `StartGrid` has been updated accordingly
+
+### **3. Test a grid config** ###
