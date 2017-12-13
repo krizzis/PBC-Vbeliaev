@@ -1,10 +1,12 @@
+from time import sleep
+
 import pytest
 from pbc.sel_grid.sel_grid import Grid, StartGrid
 from pbc.sel_grid.page import GridPage
 
 
 @pytest.mark.smoke
-@pytest.mark.selenium
+# @pytest.mark.selenium
 def test_grid_install_smoke(ssh_client):
     grid = StartGrid(Grid(ssh_client))
     grid.download()
@@ -15,6 +17,10 @@ def test_grid_install_smoke(ssh_client):
 
 
 @pytest.mark.selenium
-def test_grid_numbers_of_session(firefox_driver):
+def test_grid_numbers_of_session(ssh_client, firefox_driver):
+    grid = StartGrid(Grid(ssh_client))
+    grid.download()
+    grid.start_hub()
+    grid.add_node()
     page = GridPage(firefox_driver)
     assert page.max_sessions() == 5

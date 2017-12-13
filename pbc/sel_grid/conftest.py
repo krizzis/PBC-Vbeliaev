@@ -8,13 +8,20 @@ from pbc.sel_grid import SshClient
 def ssh_client():
     client = SshClient(HOST_NAME, USER, PASSWORD)
     yield client
-    client.execute("killall java")
     client.terminate()
+
+
+@pytest.fixture(scope='function', autouse=True)
+def tear_down(ssh_client, request):
+    def fin():
+        print ('cleaning my closet')
+        ssh_client.execute("killall java")
+        ssh_client.execute("rm -f *")
+    request.addfinalizer(fin)
 
 
 @pytest.fixture()
 def firefox_driver():
     driver = WebDriver()
-    driver.load_page('http://{}:4444/grid/console'.format(HOST_NAME))
     yield driver
     driver.close_browser()
