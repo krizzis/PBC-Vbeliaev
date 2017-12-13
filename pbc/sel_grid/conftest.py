@@ -14,7 +14,6 @@ def ssh_client():
 @pytest.fixture(scope='function', autouse=True)
 def tear_down(ssh_client, request):
     def fin():
-        print ('cleaning my closet')
         ssh_client.execute("killall java")
         ssh_client.execute("rm -f *")
     request.addfinalizer(fin)
